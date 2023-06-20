@@ -130,7 +130,7 @@ logo=("""
 def cek_apk(session,coki):
 	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
 	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")𝗮
+	x = sop.find("form",method="post")
 	game = [i.text for i in x.find_all("h3")]
 	if len(game)==0:
 		print(f"\r{N}[{M}!{N}] SORRY THERE IS NO ACTIVE APK")
